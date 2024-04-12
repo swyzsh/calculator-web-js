@@ -1,18 +1,18 @@
 @font-face {
-  font-family: '';
-  src: url();
+  font-family: 'cartograph';
+  src: url(./metadata/CartographCF-Regular.ttf);
 }
 
 /* Color Scheme */
 :root {
-  --crust: rgb(24, 25, 38);
-  --text: rgb(202, 211, 245);
-  --subtext0: rgb(165, 173, 203);
-  --overlay0: rgb(110, 115, 141);
-  --surface0: rgb(54, 58, 79);
-  --base: rgb(36, 39, 58);
+  --crust: rgb(35, 38, 52);
+  --text: rgba(239, 241, 245, 0.77);
+  --subtext0: rgb(165, 173, 206);
+  --overlay0: rgb(115, 121, 148);
+  --surface0: rgb(65, 68, 89);
+  --base: rgb(48, 52, 58);
 
-  --baseTranslucent: rgba(36, 39, 58, 0.44); 
+  --baseTranslucent: rgba(48, 52, 58, 0.44); 
 }
 
 /* let page take full heigh of viewport excess */
@@ -33,20 +33,54 @@ input[type=number] {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
+
 .backdrop-shadow {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0),
                     0 22px 70px 4px rgba(0,0,0,0.55),
                     0 0 0 1px rgba(0, 0, 0, 0.0);
 }
+
 .prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
+.key-pressed { background-color: var(--baseTranslucent); }
+
 body {
   background-color: var(--crust);
   color: var(--text);
+  font-family: 'cartograph';
+}
+
+#stylesheet-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#stylesheet-status span {
+  font-family: 'cartograph';
+  font-size: 16px;
+}
+#switch-style-button {
+  font-family: 'cartograph';
+  font-size: 16px;
+  color: var(--text);
+  background-color: var(--crust);
+  border: 1px solid var(--base);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -64,8 +98,16 @@ main {
 
 /* Contains the running status of the number */
 #display-container {
-  width: 100%;
+  width: calc(100%-32px);
   height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  font-family: 'cartograph';
+  font-size: 48px;
+  word-break: break-all;
+  padding: 16px;
 }
 
 /* Contains every keypad button accesible to user */
@@ -99,14 +141,13 @@ main {
 .grid-item-19 { grid-area: 5 / 4 / 6 / 5; border-bottom-right-radius: 16px; }
 
 .keypad {
-  background: transparent;
   border: 0.01px solid var(--base);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: var(--text); 
-  font-family: '';
+  font-family: 'cartograph';
   font-size: 24px;
 }
 .keypad:hover {
