@@ -187,3 +187,39 @@ main {
 .keypad:active {
   background-color: transparent;
 }
+
+/* Shill */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 12px);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+footer span {
+  font-family: 'cartograph';
+  font-size: 12px;
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.socials span {
+  font-family: 'cartograph';
+  font-size: 12px;
+  color: var(--text);
+  cursor: pointer;
+}
+.socials span:hover {
+  color: var(--subtext0);
+}
+.socials span:active {
+  color: var(--text);
+}

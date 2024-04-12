@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div id="stylesheet-status">
+  <div id="stylesheet-status" style="z-index: 10;">
     <button id="switch-style-button" class="backdrop-shadow background-blur prevent-select" style="z-index: 9;">
       <span style="color: #f2d5cf;">R</span>
       <span style="color: #f4b8e4;">a</span>
@@ -29,7 +29,7 @@
     <span style="z-index: 10; text-align: center;">Selected Theme<br> <span id="theme-name" style="z-index: 10; color: #babbf1;">Modern</span></span>
   </div>
 
-  <main class="backdrop-shadow background-blur">
+  <main class="backdrop-shadow background-blur" style="z-index: 10;">
 
     <div id="display-container">
       <button id="copy-result-btn" class="background-blur">COPY</button>
@@ -59,6 +59,15 @@
     </div>
 
   </main>
+
+  <footer class="prevent-select" style="z-index: 0;">
+    <span>Made with love by Swyzsh ^^</span>
+    <div class="socials">
+      <span>Github</span>
+      <span>Twitter</span>
+      <span>Mail</span>
+    </div>
+  </footer>
   
   <script src="./app.js"></script>
 </body>
