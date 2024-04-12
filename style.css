@@ -81,6 +81,10 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+#switch-style-button:hover {
+  background-color: var(--baseTranslucent);
 }
 
 main {
@@ -108,6 +112,33 @@ main {
   font-size: 48px;
   word-break: break-all;
   padding: 16px;
+}
+#display-container span {
+  transform: translate(0, 22px);
+}
+
+#copy-result-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  color: var(--text);
+  font-family: 'cartograph';
+  font-size: 12px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--baseTranslucent);
+  border: 1px solid var(--base);
+  border-radius: 8px;
+  padding: 4px 6px;
+}
+#copy-result-btn:hover {
+  background-color: var(--base);
+}
+#copy-result-btn:active {
+  background-color: var(--baseTranslucent);
 }
 
 /* Contains every keypad button accesible to user */
