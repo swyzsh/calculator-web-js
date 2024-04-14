@@ -204,7 +204,7 @@ footer {
 }
 footer span {
   font-family: 'cartograph';
-  font-size: 12px;
+  font-size: 10px;
 }
 .socials {
   display: flex;
@@ -215,7 +215,7 @@ footer span {
 }
 .socials span {
   font-family: 'cartograph';
-  font-size: 12px;
+  font-size: 10px;
   color: var(--text);
   cursor: pointer;
 }

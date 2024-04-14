@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const twitterBtn = document.getElementById('twitter-btn');
   const mailBtn = document.getElementById('mail-btn');
   githubBtn.addEventListener('click', function() {
-    window.open('https://github.com/swyzsh', '_self');
+    window.open('https://github.com/swyzsh/calculator-web-js', '_self');
   });
   twitterBtn.addEventListener('click', function() {
     window.open('https://twitter.com/swyzsh', '_self');
