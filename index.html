@@ -29,33 +29,33 @@
     <span style="z-index: 10; text-align: center;">Selected Theme<br> <span id="theme-name" style="z-index: 10; color: #babbf1;">Modern</span></span>
   </div>
 
-  <main class="backdrop-shadow background-blur" style="z-index: 10;">
+  <main class=" calculator backdrop-shadow background-blur" style="z-index: 10;">
 
     <div id="display-container">
       <button id="copy-result-btn" class="background-blur">COPY</button>
-      <span id="result">0</span>
+      <span id="display" class="calculator__display">0</span>
     </div>
 
-    <div id="action-container" class="prevent-select">
-      <div class="keypad grid-item-1">.</div>
-      <div class="keypad grid-item-2">0</div>
-      <div class="keypad grid-item-3">1</div>
-      <div class="keypad grid-item-4">2</div>
-      <div class="keypad grid-item-5">3</div>
-      <div class="keypad grid-item-6">4</div>
-      <div class="keypad grid-item-7">5</div>
-      <div class="keypad grid-item-8">6</div>
-      <div class="keypad grid-item-9">7</div>
-      <div class="keypad grid-item-10">8</div>
-      <div class="keypad grid-item-11">9</div>
-      <div class="keypad grid-item-12">AC</div>
-      <div class="keypad grid-item-13">+/-</div>
-      <div class="keypad grid-item-14">%</div>
-      <div class="keypad grid-item-15">÷</div>
-      <div class="keypad grid-item-16">x</div>
-      <div class="keypad grid-item-17">-</div>
-      <div class="keypad grid-item-18">+</div>
-      <div class="keypad grid-item-19">=</div>
+    <div id="keypad-container" class="calculator__keys prevent-select">
+      <div id="key_." class="keypad grid-item-1" data-action="decimal">.</div>
+      <div id="key_0" class="keypad grid-item-2">0</div>
+      <div id="key_1" class="keypad grid-item-3">1</div>
+      <div id="key_2" class="keypad grid-item-4">2</div>
+      <div id="key_3" class="keypad grid-item-5">3</div>
+      <div id="key_4" class="keypad grid-item-6">4</div>
+      <div id="key_5" class="keypad grid-item-7">5</div>
+      <div id="key_6" class="keypad grid-item-8">6</div>
+      <div id="key_7" class="keypad grid-item-9">7</div>
+      <div id="key_8" class="keypad grid-item-10">8</div>
+      <div id="key_9" class="keypad grid-item-11">9</div>
+      <div id="key_AC" class="keypad grid-item-12" data-action="clear">AC</div>
+      <div id="key_+-" class="keypad grid-item-13" data-action="signChange">+/-</div>
+      <div id="key_%" class="keypad grid-item-14 key--operator" data-action="percentage">%</div>
+      <div id="key_/" class="keypad grid-item-15 key--operator" data-action="divide">÷</div>
+      <div id="key_x" class="keypad grid-item-16 key--operator" data-action="multiply">&times;</div>
+      <div id="key_-" class="keypad grid-item-17 key--operator" data-action="substract">-</div>
+      <div id="key_+" class="keypad grid-item-18 key--operator" data-action="add">+</div>
+      <div id="key_=" class="keypad grid-item-19 key--equal" data-action="calculate">=</div>
     </div>
 
   </main>
@@ -63,9 +63,9 @@
   <footer class="prevent-select" style="z-index: 0;">
     <span>Made with love by Swyzsh ^^</span>
     <div class="socials">
-      <span>Github</span>
-      <span>Twitter</span>
-      <span>Mail</span>
+      <span id="github-btn">Github</span>
+      <span id="twitter-btn">Twitter</span>
+      <span id="mail-btn">Mail</span>
     </div>
   </footer>
   

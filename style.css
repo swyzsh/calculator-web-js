@@ -46,7 +46,7 @@ input[type=number] {
   user-select: none; /* Standard syntax */
 }
 
-.key-pressed { background-color: var(--baseTranslucent); }
+.key-pressed { background-color: var(--baseTranslucent) !important; }
 
 body {
   background-color: var(--crust);
@@ -142,7 +142,7 @@ main {
 }
 
 /* Contains every keypad button accesible to user */
-#action-container {
+#keypad-container {
   width: 100%;
   height: 100%;
   display: grid;
