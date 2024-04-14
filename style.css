@@ -55,7 +55,7 @@ body {
 }
 
 #stylesheet-status {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,8 +64,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin: 8px;
-  
+  margin-top: 8px;
 }
 #stylesheet-status span {
   font-family: 'cartograph';
@@ -79,6 +78,7 @@ body {
   border: 1px solid var(--base);
   border-radius: 10px;
   padding: 8px 12px;
+  margin-right: 16px;
   display: flex;
   flex-direction: row;
   justify-content: center;
