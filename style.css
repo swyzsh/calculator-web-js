@@ -57,13 +57,15 @@ body {
 #stylesheet-status {
   position: absolute;
   top: 0;
-  right: 0;
-  margin: 16px;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin: 8px;
+  
 }
 #stylesheet-status span {
   font-family: 'cartograph';

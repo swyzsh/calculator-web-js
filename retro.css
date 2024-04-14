@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'bios';
+  src: url(./metadata/AcPlus_IBM_BIOS.ttf);
+}
+
+/* Color Scheme */
+:root {
+  --base: black;
+  --text: #fcfcfc;
+  --surface: #545454;
+  --subtext: #54fc54;
+}
+
+/* let page take full heigh of viewport excess */
+html {height: 100%;} body {position: absolute; top:0; bottom:0; right:0; left:0;}
+
+/* remove spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} /* Chrome, Safari, Edge, Opera */
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+} /* Firefox */
+
+.background-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.backdrop-shadow {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0),
+                    0 22px 70px 4px rgba(0,0,0,0.55),
+                    0 0 0 1px rgba(0, 0, 0, 0.0);
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.is-depressed { background-color: var(--subtext) !important;  color: black !important; }
+
+body {
+  background-color: var(--base);
+  color: var(--text);
+  font-family: 'bios';
+}
+
+#stylesheet-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 8px;
+  color: var(--text);
+}
+#stylesheet-status span {
+  font-family: 'bios';
+  font-size: 12px;
+}
+#switch-style-button {
+  font-family: 'bios';
+  font-size: 12px;
+  color: var(--subtext);
+  background-color: var(--base);
+  border: 1px solid var(--subtext);
+  border-radius: 0px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#switch-style-button:hover {
+  background-color: var(--surface);
+}
+
+main {
+  background-color: black;
+  color: var(--text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 420px;
+  border: 1px solid var(--subtext);
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contains the running status of the number */
+#display-container {
+  width: calc(100%-32px);
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  font-family: 'bios';
+  font-size: 40px;
+  word-break: break-all;
+  padding: 16px;
+}
+#display-container span {
+  transform: translate(0, 22px);
+  color: var(--text);
+}
+
+#copy-result-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  color: var(--text);
+  font-family: 'bios';
+  font-size: 10px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--base);
+  border: 1px solid var(--subtext);
+  border-radius: 0px;
+  padding: 4px 6px;
+}
+#copy-result-btn:hover {
+  background-color: var(--surface);
+}
+#copy-result-btn:active {
+  background-color: var(--base);
+}
+
+/* Contains every keypad button accesible to user */
+#keypad-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.grid-item-1 { grid-area: 5 / 3 / 6 / 4; }
+.grid-item-2 { grid-area: 5 / 1 / 6 / 3; border-bottom-left-radius: 0px; }
+.grid-item-3 { grid-area: 4 / 1 / 5 / 2; }
+.grid-item-4 { grid-area: 4 / 2 / 5 / 3; }
+.grid-item-5 { grid-area: 4 / 3 / 5 / 4; }
+.grid-item-6 { grid-area: 3 / 1 / 4 / 2; }
+.grid-item-7 { grid-area: 3 / 2 / 4 / 3; }
+.grid-item-8 { grid-area: 3 / 3 / 4 / 4; }
+.grid-item-9 { grid-area: 2 / 1 / 3 / 2; }
+.grid-item-10 { grid-area: 2 / 2 / 3 / 3; }
+.grid-item-11 { grid-area: 2 / 3 / 3 / 4; }
+.grid-item-12 { grid-area: 1 / 1 / 2 / 2; }
+.grid-item-13 { grid-area: 1 / 2 / 2 / 3; }
+.grid-item-14 { grid-area: 1 / 3 / 2 / 4; }
+.grid-item-15 { grid-area: 1 / 4 / 2 / 5; }
+.grid-item-16 { grid-area: 2 / 4 / 3 / 5; }
+.grid-item-17 { grid-area: 3 / 4 / 4 / 5; }
+.grid-item-18 { grid-area: 4 / 4 / 5 / 5; }
+.grid-item-19 { grid-area: 5 / 4 / 6 / 5; border-bottom-right-radius: 0px; }
+
+.keypad {
+  border: 0.01px solid var(--subtext);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  font-family: 'bios';
+  font-size: 20px;
+}
+.keypad:hover {
+  background-color: var(--surface);
+}
+.keypad:active {
+  background-color: var(--base);
+}
+
+/* Shill */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 12px);
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+footer span {
+  font-family: 'bios';
+  font-size: 8px;
+  color: var(--text);
+}
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.socials span {
+  font-family: 'bios';
+  font-size: 8px;
+  color: var(--text);
+  cursor: pointer;
+}
+.socials span:hover {
+  color: var(--subtext);
+}
+.socials span:active {
+  color: var(--text);
+}
